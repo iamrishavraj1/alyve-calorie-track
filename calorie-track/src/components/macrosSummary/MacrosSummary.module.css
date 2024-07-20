@@ -1,0 +1,35 @@
+.macrosSummaryPadding {
+  width: 100%;
+  padding-inline: 16px;
+  padding-bottom: 10px;
+}
+.macrosSummaryWrapper {
+  width: 100%;
+  padding-block: 10px;
+  padding-inline: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.macrosSummaryCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.circularProgressCon {
+  width: 60%;
+}
+
+.normalProgressCon {
+  width: 40%;
+  white-space: nowrap;
+}
+
+.caloriesInfo {
+  margin-top: 10px;
+  font-size: 1.2em;
+}

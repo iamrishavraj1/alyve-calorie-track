@@ -1,0 +1,51 @@
+.arcProgress {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-130deg);
+}
+
+.arcBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #f3edf7 0,
+    #f3edf7 74%,
+    transparent 11%,
+    transparent 0
+  );
+}
+
+.arcForeground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4d5bf9 0%,
+    #4d5bf9 calc(var(--percentage) * 0.75%),
+    transparent calc(var(--percentage) * 0.75%),
+    transparent 100%
+  );
+}
+
+.arcInnerCircle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(130deg);
+}
+
+.arcProgressText {
+  font-size: 1.2em;
+}

@@ -1,0 +1,38 @@
+.mealCard {
+  background-color: white;
+  border-radius: 10px;
+  padding-block: 20px;
+  padding-inline: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.mealHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mealHeader h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.mealHeader p {
+  margin: 0;
+  font-size: 18px;
+  color: #888;
+}
+
+.mealItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mealItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}

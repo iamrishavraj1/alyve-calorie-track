@@ -1,0 +1,89 @@
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 16px;
+  padding-block: 8px;
+  width: 100%;
+}
+
+.headerCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.headerGreetingMsg {
+  flex: 1;
+}
+
+.notificationBell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.headerCon p {
+  font-size: 1rem;
+  color: #888;
+}
+
+.headerCon h3 {
+  font-size: 1.5rem;
+}
+
+.datePickerCon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.monthPicker {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 10px; */
+}
+
+.monthSelectCon {
+  flex: 1;
+}
+
+/* .monthPicker select {
+  padding: 5px;
+  font-size: 16px;
+} */
+
+.datePicker {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dateItem {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dateItem.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.customDatePicker {
+  position: absolute;
+  right: 5px;
+  top: 80px;
+  z-index: 2;
+}
