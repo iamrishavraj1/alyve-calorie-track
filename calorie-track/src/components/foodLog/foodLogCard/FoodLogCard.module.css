@@ -1,0 +1,113 @@
+.mealCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.mealImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mealInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mealHeader {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.mealName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}
+
+.mealDetails {
+  display: flex;
+  flex: 1;
+  /* align-items: center; */
+  flex-direction: column;
+}
+
+.mealCalories {
+  font-size: 14px;
+  color: #888;
+}
+
+.mealWeight {
+  font-size: 14px;
+  color: #888;
+}
+
+.mealMacros {
+  display: flex;
+  justify-content: space-between;
+}
+
+.macro {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.macroValue {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.macroLabel {
+  font-size: 12px;
+  color: #888;
+}
+
+.fireIcon {
+  color: rgb(247, 168, 21);
+}
+
+.progressBarContainer {
+  width: 20px;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  transform: rotate(270deg);
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.proteinBar {
+  background-color: #4caf50; /* Green */
+}
+
+.carbsBar {
+  background-color: #ff9800; /* Orange */
+}
+
+.fatBar {
+  background-color: #9c27b0; /* Purple */
+}

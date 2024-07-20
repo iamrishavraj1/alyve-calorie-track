@@ -1,0 +1,39 @@
+.datePickerCon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.monthPicker {
+  display: flex;
+  align-items: center;
+}
+
+.monthSelectCon {
+  flex: 1;
+}
+
+.datePicker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateItem {
+  padding-block: 5px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dateItem.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.customDatePicker {
+  position: absolute;
+  right: 5px;
+  top: 80px;
+  z-index: 2;
+}

@@ -1,0 +1,12 @@
+.section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100dvh;
+  /* gap: 10px; */
+  max-width: 767px;
+  margin: auto;
+  background-color: #f0f0f0;
+}
