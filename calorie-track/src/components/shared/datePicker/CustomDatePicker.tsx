@@ -5,7 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format, addDays, startOfWeek } from "date-fns";
 
-const CustomDatePicker = ({ selectedDate, onDateChange }) => {
+const CustomDatePicker = ({ selectedDate, onDateChange }: any) => {
   const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false);
 
   const toggleCalendarOpener = () => {

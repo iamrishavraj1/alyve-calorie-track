@@ -52,8 +52,8 @@
   justify-content: center;
   width: 100%;
   padding-inline: 10px;
-  padding-top: 40px;
   position: relative;
+  flex: 1;
 }
 
 .searchBar input {
@@ -104,13 +104,16 @@
   gap: 10px;
   padding-inline: 10px;
   height: 100%;
-  max-height: 347px;
+  max-height: calc(100dvh - 311.5px);
   overflow-y: auto;
+
+  /* 55 + 77.5 + 30 + 149 */
 }
 
 .doneButtonCon {
   width: 100%;
   padding-inline: 10px;
+  padding-block: 10px;
 }
 
 .doneButton {
@@ -121,4 +124,13 @@
   cursor: pointer;
   border-radius: 8px;
   width: 100%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  font-size: 16px;
+  color: #888;
 }

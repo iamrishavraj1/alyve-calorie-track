@@ -1,7 +1,6 @@
 import classes from "./CircularProgressBar.module.css";
 
-const CircularProgressBar = () => {
-  const percentage = 50; // Example percentage
+const CircularProgressBar = ({ percentage }: any) => {
   return (
     <div
       className={classes.arcProgress}

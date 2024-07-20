@@ -1,6 +1,6 @@
 import classes from "./NormalProgressBar.module.css";
 
-const NormalProgressBar = ({ items, percentage, quantity }) => {
+const NormalProgressBar = ({ items, percentage, quantity }: any) => {
   return (
     <div>
       {items}

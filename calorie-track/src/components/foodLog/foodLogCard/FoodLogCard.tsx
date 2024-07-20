@@ -2,13 +2,12 @@ import Image from "next/image";
 import classes from "./FoodLogCard.module.css";
 import { FaFire } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import { FoodLogCardProps } from "@/types/edamamDataType";
 
-const FoodLogCard = ({ meal, onRemove }) => {
-  console.log("meal-->", meal);
-
-  const getProgressBarStyle = (value) => {
+const FoodLogCard: React.FC<FoodLogCardProps> = ({ meal, onRemove }) => {
+  const getProgressBarStyle = (value: number | null) => {
     return {
-      width: `${value}%`,
+      width: `${value || 0}%`,
     };
   };
 

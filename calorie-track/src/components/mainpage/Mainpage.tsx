@@ -1,3 +1,4 @@
+"use clinet";
 import React from "react";
 import classes from "./Mainpage.module.css";
 import Header from "../header/Header";

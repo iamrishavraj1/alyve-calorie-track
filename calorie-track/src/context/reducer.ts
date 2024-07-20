@@ -1,7 +1,7 @@
-const deepCopy = (state) => JSON.parse(JSON.stringify(state));
+const deepCopy = (state: any) => JSON.parse(JSON.stringify(state));
 
-export const setUserAuthorisedReducer = (state, action) => {
+export const setMealReducer = (state: any, action: any) => {
   let stateCopy = deepCopy(state);
-  stateCopy.data.isUserAuthorised = action.data.isUserAuthorised;
+  stateCopy.data.mealData = action.data.mealData;
   return stateCopy;
 };
