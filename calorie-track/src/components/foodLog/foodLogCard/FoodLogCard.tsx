@@ -18,7 +18,7 @@ const FoodLogCard: React.FC<FoodLogCardProps> = ({ meal, onRemove }) => {
           src={meal.image}
           height={100}
           width={100}
-          alt={meal.name}
+          alt={"food"}
           className={classes.mealImage}
         />
 
@@ -27,7 +27,7 @@ const FoodLogCard: React.FC<FoodLogCardProps> = ({ meal, onRemove }) => {
           <div>
             <span className={classes.mealCalories}>
               <FaFire className={classes.fireIcon} />{" "}
-              {meal?.nutrients?.ENERC_KCAL} kcal - 100 G
+              {(meal?.nutrients?.ENERC_KCAL).toFixed(1)} kcal - 100 G
             </span>
           </div>
         </div>
@@ -44,7 +44,7 @@ const FoodLogCard: React.FC<FoodLogCardProps> = ({ meal, onRemove }) => {
                 style={getProgressBarStyle(meal?.nutrients?.PROCNT)}></div>
             </div>
             <span className={classes.macroValue}>
-              {meal?.nutrients?.PROCNT} g
+              {(meal?.nutrients?.PROCNT).toFixed(1)} g
             </span>
             <span className={classes.macroLabel}>Protein</span>
           </div>
@@ -55,7 +55,7 @@ const FoodLogCard: React.FC<FoodLogCardProps> = ({ meal, onRemove }) => {
                 style={getProgressBarStyle(meal?.nutrients?.CHOCDF)}></div>
             </div>
             <span className={classes.macroValue}>
-              {meal?.nutrients?.CHOCDF} g
+              {(meal?.nutrients?.CHOCDF).toFixed(1)} g
             </span>
             <span className={classes.macroLabel}>Carbs</span>
           </div>
@@ -65,7 +65,9 @@ const FoodLogCard: React.FC<FoodLogCardProps> = ({ meal, onRemove }) => {
                 className={`${classes.progressBar} ${classes.fatBar}`}
                 style={getProgressBarStyle(meal?.nutrients?.FAT)}></div>
             </div>
-            <span className={classes.macroValue}>{meal?.nutrients?.FAT} g</span>
+            <span className={classes.macroValue}>
+              {(meal?.nutrients?.FAT).toFixed(1)} g
+            </span>
             <span className={classes.macroLabel}>Fat</span>
           </div>
         </div>

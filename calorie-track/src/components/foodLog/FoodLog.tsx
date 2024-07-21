@@ -16,8 +16,9 @@ const mealTabInfo = [
 
 const FoodLogPage: React.FC = () => {
   const ctx = useContext(AlyveCalorieTrackContext);
-  const { setMealHandler } = ctx;
+  const { setMealHandler, setSelectedDateHandler } = ctx;
   const router = useRouter();
+
   const abortControllerRef = useRef<AbortController | null>(null);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -78,13 +79,14 @@ const FoodLogPage: React.FC = () => {
     setSelectedMeals(updatedMeals);
     setSearchTerm("");
     setSearchResults([]);
-    // if (typeof window !== "undefined") {
-    //   global?.localStorage?.setItem(
-    //     "selectedMeals",
-    //     JSON.stringify(updatedMeals)
-    //   );
-    // }
+    if (typeof window !== "undefined") {
+      window?.localStorage?.setItem(
+        "selectedMeals",
+        JSON.stringify(updatedMeals)
+      );
+    }
     setMealHandler({ mealData: updatedMeals });
+    setSelectedDateHandler({ selectedDateKey: dateKey });
   };
 
   const removeMeal = (mealToRemove: FoodItem) => {
@@ -99,13 +101,14 @@ const FoodLogPage: React.FC = () => {
       },
     };
     setSelectedMeals(updatedMeals);
-    // if (typeof window !== "undefined") {
-    //   global?.localStorage.setItem(
-    //     "selectedMeals",
-    //     JSON.stringify(updatedMeals)
-    //   );
-    // }
+    if (typeof window !== "undefined") {
+      window?.localStorage.setItem(
+        "selectedMeals",
+        JSON.stringify(updatedMeals)
+      );
+    }
     setMealHandler({ mealData: updatedMeals });
+    setSelectedDateHandler({ selectedDateKey: dateKey });
   };
 
   useEffect(() => {
@@ -121,17 +124,17 @@ const FoodLogPage: React.FC = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const savedMeals: any = {};
+      const savedMeals = window?.localStorage?.getItem("selectedMeals");
       if (savedMeals) {
         setSelectedMeals(JSON.parse(savedMeals));
       }
     }
   }, [selectedDate]);
 
-  const dateKey = selectedDate.toLocaleDateString(); // Use toLocaleDateString for consistent date format
+  const dateKey = selectedDate.toLocaleDateString();
 
   const handleDoneBtnClick = () => {
-    router.push(`/?date=${dateKey}`);
+    router.push(`/`);
   };
 
   return (

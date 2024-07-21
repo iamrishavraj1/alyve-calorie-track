@@ -18,9 +18,5 @@ export default function FoodLogLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={poppins.className}>{children}</body>
-    </html>
-  );
+  return <div className={poppins.className}>{children}</div>;
 }

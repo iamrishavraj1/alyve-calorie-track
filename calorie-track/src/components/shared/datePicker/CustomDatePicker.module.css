@@ -12,6 +12,11 @@
 .monthSelectCon {
   flex: 1;
 }
+.monthSelect {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 3px;
+}
 
 .datePicker {
   display: flex;

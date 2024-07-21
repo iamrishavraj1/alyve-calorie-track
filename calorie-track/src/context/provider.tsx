@@ -8,6 +8,8 @@ const reducer = (state: any, action: any) => {
   switch (action.type) {
     case "SET_MEAL":
       return reducers.setMealReducer(state, action);
+    case "SET_SELECTED_DATE":
+      return reducers.setSelectedDateReducer(state, action);
 
     default:
       return state;
@@ -24,6 +26,7 @@ export const AlyveCalorieTrackProvider = ({ children }: any) => {
   const value = {
     data: JSON.parse(JSON.stringify(alyveCalorieTrackData.data)),
     setMealHandler: dispatchHandler("SET_MEAL"),
+    setSelectedDateHandler: dispatchHandler("SET_SELECTED_DATE"),
   };
 
   return (

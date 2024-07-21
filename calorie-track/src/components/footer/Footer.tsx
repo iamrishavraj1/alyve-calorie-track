@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaHome, FaChartBar, FaPlus } from "react-icons/fa";
 import classes from "./Footer.module.css";
