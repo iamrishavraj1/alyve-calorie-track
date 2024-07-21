@@ -27,6 +27,7 @@ const CustomDatePicker = ({ selectedDate, onDateChange }: any) => {
       <div className={classes.monthPicker}>
         <div className={classes.monthSelectCon}>
           <select
+            className={classes.monthSelect}
             value={format(selectedDate, "MMMM")}
             onChange={(e) => handleMonthChange(e)}>
             {Array.from({ length: 12 }, (_, i) => (
@@ -51,7 +52,7 @@ const CustomDatePicker = ({ selectedDate, onDateChange }: any) => {
                 : ""
             }`}
             onClick={() => onDateChange(date)}>
-            {format(date, "EEE d")}
+            <p>{format(date, "EEE d")}</p>
           </div>
         ))}
       </div>

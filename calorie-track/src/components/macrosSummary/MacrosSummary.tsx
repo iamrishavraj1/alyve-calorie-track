@@ -1,17 +1,17 @@
+"use client";
 import React, { useContext, useEffect, useState } from "react";
 import classes from "./MacrosSummary.module.css";
 import CircularProgressBar from "./circularProgressBar/CircularProgressBar";
 import NormalProgressBar from "./normalProgressBar/NormalProgressBar";
 import { AlyveCalorieTrackContext } from "@/context/context";
-import { useSearchParams } from "next/navigation";
 import { format } from "date-fns";
 
 const MacrosSummary: React.FC = () => {
   const ctx = useContext(AlyveCalorieTrackContext);
   const { data } = ctx;
-  const searchParams = useSearchParams();
+  const { selectedDateKey } = data;
 
-  const dateParam = searchParams.get("date");
+  const dateParam = selectedDateKey;
   const currentDate = dateParam ? dateParam : format(new Date(), "dd/MM/yyyy");
 
   const [macros, setMacros] = useState({
@@ -43,6 +43,13 @@ const MacrosSummary: React.FC = () => {
         carbs: totalCarbs,
         fats: totalFats,
         calories: totalCalories,
+      });
+    } else {
+      setMacros({
+        protein: 0,
+        carbs: 0,
+        fats: 0,
+        calories: 0,
       });
     }
   }, [data, currentDate]);

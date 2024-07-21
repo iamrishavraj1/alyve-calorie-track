@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
 import classes from "./MealCard.module.css";
-import { FoodItem, MealCardProps, MealData } from "@/types/edamamDataType";
+import { MealCardProps } from "@/types/edamamDataType";
 
 const MealCard: React.FC<MealCardProps> = ({ meal }) => {
   const router = useRouter();

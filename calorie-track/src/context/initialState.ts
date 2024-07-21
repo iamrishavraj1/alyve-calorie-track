@@ -1,9 +1,13 @@
 "use client";
+import { ContextState } from "@/types/contextType";
 import { MealData } from "@/types/edamamDataType";
+import { getInitialMealData } from "@/utils/getLocalStorageData";
 
-export const INITIAL_STATE = {
+export const INITIAL_STATE: ContextState = {
   data: {
-    mealData: {} as any,
+    mealData: getInitialMealData(),
+    selectedDateKey: new Date().toLocaleDateString(),
   },
-  setMealHandler: (p0: { mealData: MealData | null }) => {},
+  setMealHandler: () => {},
+  setSelectedDateHandler: () => {},
 };
